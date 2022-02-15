@@ -10,13 +10,13 @@ html {
 }
 
 .container {
-  /* border: 3px solid red; */
   text-align: center;
   width: 60%;
   margin: 0 auto;
 }
 
-.header {
+.header,
+.btn {
   background-image: linear-gradient(
     45deg,
     hsl(240deg 100% 20%) 0%,
@@ -32,6 +32,16 @@ html {
   );
   color: #fff;
   padding: 2rem;
+}
+
+input,
+.btn {
+  padding: 1rem 2rem;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .num-box {
@@ -51,11 +61,4 @@ h1 {
 h3,
 p {
   padding: 1rem;
-}
-
-input,
-button {
-  margin-top: 1rem;
-  padding: 1em 2rem;
-  font-size: 1.2rem;
 }
