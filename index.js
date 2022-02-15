@@ -12,24 +12,24 @@ const foot = 3.281;
 const meter = 0.305;
 let calculatedFeet = 0;
 let calculatedMeters = 0;
-let initialString = `${number} meters = ${calculatedFeet} feet | ${number} feet = ${calculatedMeters} meters`;
+let lengthString = `${number} meters = ${calculatedFeet} feet | ${number} feet = ${calculatedMeters} meters`;
 //===========================
 const gallon = 0.22;
 const liter = 4.546;
 let calculatedGallons = 0;
 let calculatedLiters = 0;
-let initialCon = `${number} liters = ${calculatedGallons} gallons | ${number} gallons = ${calculatedLiters} liters`;
+let volumeString = `${number} liters = ${calculatedGallons} gallons | ${number} gallons = ${calculatedLiters} liters`;
 //=============================
 const kg = 0.454;
 const pound = 2.204;
 let calculatedKgs = 0;
 let calculatedPounds = 0;
-let initCon = `${number} kilos = ${calculatedPounds} pounds | ${number} pounds = ${calculatedKgs} kilos`;
+let weightString = `${number} kilos = ${calculatedPounds} pounds | ${number} pounds = ${calculatedKgs} kilos`;
 //=============================
 
-meterFeet.textContent = initialString;
-litersGallons.textContent = initialCon;
-kgPounds.textContent = initCon; // ***************
+meterFeet.textContent = lengthString;
+litersGallons.textContent = volumeString;
+kgPounds.textContent = weightString;
 
 function length() {
   let res = number * meter;
@@ -41,8 +41,8 @@ function length() {
   calculatedMeters = result;
   calculatedFeet = res2;
 
-  initialString = `${number} meters = ${calculatedFeet} feet | ${number} feet = ${calculatedMeters} meters`;
-  meterFeet.textContent = initialString;
+  lengthString = `${number} meters = ${calculatedFeet} feet | ${number} feet = ${calculatedMeters} meters`;
+  meterFeet.textContent = lengthString;
 }
 function volume() {
   let res = number * gallon;
@@ -52,8 +52,8 @@ function volume() {
   calculatedGallons = result;
   calculatedLiters = res2;
 
-  initialCon = `${number} liters = ${calculatedGallons} gallons | ${number} gallons = ${calculatedLiters} liters`;
-  litersGallons.textContent = initialCon;
+  volumeString = `${number} liters = ${calculatedGallons} gallons | ${number} gallons = ${calculatedLiters} liters`;
+  litersGallons.textContent = volumeString;
 }
 
 function weight() {
@@ -64,8 +64,8 @@ function weight() {
   calculatedPounds = result;
   calculatedKgs = res2;
 
-  initCon = `${number} kilos = ${calculatedPounds} pounds | ${number} pounds = ${calculatedKgs} kilos`;
-  kgPounds.textContent = initCon;
+  weightString = `${number} kilos = ${calculatedPounds} pounds | ${number} pounds = ${calculatedKgs} kilos`;
+  kgPounds.textContent = weightString;
 }
 
 btn.addEventListener("click", (e) => {
